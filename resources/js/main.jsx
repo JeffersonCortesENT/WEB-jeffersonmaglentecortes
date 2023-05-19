@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Routes, Route } from "react-router";
-import Example from "./components/Example";
+import AppointmentForm from "./components/AppointmentForm";
+import HomePage from "./components/HomePage";
 
 class Main extends Component {
   render () {
     return (
       <div>
         <Routes>
-          <Route path="/" element={<Example/>}/>
+          <Route path="/" element={<HomePage/>}/>
         </Routes>
       </div>
     );

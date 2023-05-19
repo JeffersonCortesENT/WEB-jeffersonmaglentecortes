@@ -1,5 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../css/main.css'
 import Main from "./main";
 import { createRoot } from 'react-dom/client';
 import { Provider } from "react-redux";

@@ -3,6 +3,15 @@ namespace App\Constants;
 
 class AppConstants
 {
+  //Common
+  public const CREATED_AT = 'created_at';
+  public const UPDATED_AT = 'updated_at';
+  public const STATUS = 'status';
+  public const RESPONSE = 'response';
+  public const REQUEST_ERROR = 'A request error occured!';
+  public const REQUEST_SUCCESS = 'Request Successful!';
+
+
   //Appointments
   public const APPOINTMENT_TABLE = 't_appointment';
   public const APPOINTMENT_ID = 'appointment_id';
@@ -35,9 +44,9 @@ class AppConstants
     self::SAT,
     self::SUN,
   ];
-  public const MORNING = 'MORNING';
-  public const AFTERNOON = 'AFTERNOON';
-  public const EVENING = 'EVENING';
+  public const MORNING = 'morning';
+  public const AFTERNOON = 'afternoon';
+  public const EVENING = 'evening';
   public const DAY_TIME_VALUES = [
     self::MORNING,
     self::AFTERNOON,

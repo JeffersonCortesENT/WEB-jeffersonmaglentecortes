@@ -13,12 +13,14 @@ return new class extends Migration
     public function up(): void
     {
       Schema::create(AppConstants::APPOINTMENT_TABLE, function (Blueprint $table) {
-          $table->integer(AppConstants::APPOINTMENT_ID, 11);
+          $table->increments(AppConstants::APPOINTMENT_ID);
           $table->enum(AppConstants::FREQUENCY, ['resuming','one_time']);
           $table->date(AppConstants::START_DATE);
-          $table->string(AppConstants::APPLIED_WEEK_DAYS, 30);
-          $table->string(AppConstants::APPLIED_DAY_TIME, 30);
+          $table->string(AppConstants::APPLIED_WEEK_DAYS, 50);
+          $table->string(AppConstants::APPLIED_DAY_TIME, 50);
           $table->text(AppConstants::SITTER_NOTES);
+          $table->datetime(AppConstants::CREATED_AT)->nullable();
+          $table->datetime(AppConstants::UPDATED_AT)->nullable();
         });
       }
     /**
