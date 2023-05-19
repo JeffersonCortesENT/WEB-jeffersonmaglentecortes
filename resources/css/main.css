@@ -78,7 +78,7 @@ a {
   margin: 0px 0px 35px 15px;
 }
 
-.service-button {
+.service-button, .submit-form > button {
   -webkit-border-radius: 39;
   -moz-border-radius: 39;
   border-radius: 39px;
@@ -104,9 +104,10 @@ a {
 
 .inclusion-list {
   text-align: left;
-  background-image: url('/images/inclusion_list.jpg');
-  background-size: 100% 100%;
-  height: 500px;
+  /* background-image: url('/images/inclusion_list.jpg');
+  background-size: 100% 100%; */
+  background-color: #535973;
+  height: 800px;
 }
 
 .inclusion-logo {
@@ -116,10 +117,6 @@ a {
 
 div:has(> .inclusion-logo) {
   padding: 30px 0 50px 0;
-}
-
-.appointment-form {
-  background-color: pink;
 }
 
 .inclusion-bullets {
@@ -145,6 +142,135 @@ div:has(> .inclusion-logo) {
   list-style-position: inside;
   padding-bottom: 30px;
   font-size: 18px;
+}
+
+.appointment-form {
+  background-color: #f7eceb;
+  color: #3c425f;
+  padding: 40px 50px 0 70px;
+  height: 800px;
+}
+
+.appointment-form > .row {
+  margin-bottom: 30px;
+}
+
+.form-header-text {
+  font-size: 45px;
+}
+
+div:has(> .form-header-text) {
+  padding-bottom: 35px;
+}
+
+.frequency-selection {
+  background-color: #ffffff;
+  padding: 10px;
+  width: 90%;
+}
+
+.start-date {
+  background-color: white;
+  padding: 15px;
+  width: 90%;
+  height: 60%;
+}
+
+.frequency-selection label {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.frequency-selection input[type="radio"] {
+  display: none;
+}
+
+.frequency-selection input[type="radio"]:checked + label {
+  background-color: #e9cfcd;
+  position: relative;
+  display: inline-block;
+}
+
+.days-selection {
+  background-color: #ffffff;
+  width: 95%;
+  text-align: center;
+}
+
+.days-selection label {
+  display: inline-block;
+  width: 14.28%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.days-selection input[type="checkbox"] {
+  display: none;
+}
+
+.days-selection input[type="checkbox"]:checked + label {
+  background-color: #e9cfcd;
+  position: relative;
+  display: inline-block;
+}
+
+.time-selection {
+  background-color: #ffffff;
+  width: 95%;
+  text-align: center;
+}
+
+.time-selection label {
+  width: 33.3%;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+.time-selection input[type="checkbox"] {
+  display: none;
+}
+
+.time-selection input[type="checkbox"]:checked + label {
+  background-color: #e9cfcd;
+  position: relative;
+  display: inline-block;
+}
+
+.date-style, .date-style::placeholder, .date-style:focus {
+  width: 100%;
+  color: #f3e4e4;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+
+.sub-texts {
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.sitter_notes {
+  width: 95%;
+  background-color: #ffffff;
+}
+
+.sitter_notes > textarea, textarea:focus {
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.sitter_notes > textarea::placeholder {
+  color: #e9cfcd;
+}
+
+.submit-form {
+  text-align: center;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -190,7 +316,7 @@ div:has(> .inclusion-logo) {
     margin: 0px 0px 35px 15px;
   }
   
-  .service-button {
+  .service-button, .submit-form > button {
     -webkit-border-radius: 39;
     -moz-border-radius: 39;
     border-radius: 39px;
@@ -206,28 +332,31 @@ div:has(> .inclusion-logo) {
   }
 
   .inclusion-bullets {
-    text-align: left;
-    margin-left: 50px;
     padding-left: 0;
   }
-  
-  .inclusion-bullets > b {
-    margin: 50px 0px 25px 0px !important;
-    color: #ffffff;
-    font-size: 25px;
-    padding-bottom: 40px;
+
+  .form-header-text {
+    font-size: 22px;
   }
   
-  .inclusion-bullets > ul {
-    padding-left: 0;
-    color: #ffffff;
-    margin-top: 25px;
+  .days-selection label {
+    font-size: 12px;
+  }
+
+  .time-selection label {
+    font-size: 12px;
+  }
+
+  .sitter_notes > textarea, textarea:focus, textarea::placeholder {
+    font-size: 12px;
+  }
+
+  .inclusion-list {
+    height: 500px;
   }
   
-  .inclusion-bullets > ul > li {
-    list-style-position: inside;
-    padding-bottom: 30px;
-    font-size: 18px;
+  .appointment-form {
+    height: 925px;
   }
 }
 
@@ -249,6 +378,18 @@ div:has(> .inclusion-logo) {
 
   div:has(> .inclusion-logo) {
     padding-left: 120px;
+  }
+
+  .form-header-text {
+    font-size: 35px;
+  }
+
+  .inclusion-list {
+    height: 500px;
+  }
+  
+  .appointment-form {
+    height: 850px;
   }
 }
 
@@ -275,11 +416,16 @@ div:has(> .inclusion-logo) {
   .inclusion-bullets {
     padding-left: 50px;
   }
+
+  .form-header-text {
+    font-size: 35px;
+  }
+
+  .inclusion-list {
+    height: 900px;
+  }
+  
+  .appointment-form {
+    height: 900px;
+  }
 }
-
-
-/* 320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV */

@@ -11,5 +11,6 @@ class ValidationConstants
   public const IN = 'in:';
   public const DATE_FORMAT = 'date_format:';
   public const STANDARD_DATE_FORMAT = 'Y-m-d';
+  public const NULLABLE = 'nullable';
   public const DATE = self::DATE_FORMAT. self::STANDARD_DATE_FORMAT;
 }

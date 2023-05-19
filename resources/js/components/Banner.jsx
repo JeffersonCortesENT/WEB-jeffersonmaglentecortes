@@ -17,7 +17,7 @@ const Banner = ({ moveToAppointmentForm, moveToServiceForm }) => {
       <section className="banner-section">
         <nav className="navbar navbar-expand-lg">
           <a className="navbar-brand" href="#">
-            <img src="/images/pet-shop-logo.png" className="navbar-photo"/>PAWTASTIC
+            <img src="/images/pawtastic-logo.png" className="navbar-photo"/>PAWTASTIC
           </a>
 
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

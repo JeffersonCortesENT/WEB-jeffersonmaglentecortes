@@ -9,8 +9,8 @@ const ServiceDetails = ({ serviceRef, moveToAppointmentForm }) => {
 
   return (
     <>
-      <section ref={serviceRef} className="service-section">
-        <div className="row">
+      <section className="service-section">
+        <div className="row" ref={serviceRef}>
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 service-description">
             <p className="description-header">
               Expert care for your furry, feathery, or scaley friend
@@ -24,28 +24,28 @@ const ServiceDetails = ({ serviceRef, moveToAppointmentForm }) => {
           </div>
           <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 service-gallery">
             <div className="row">
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <img
                   src="/images/cat.jpg"
                   className="gallery-image"
                   alt="Cat"
                 />
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <img
                   src="/images/parrot.jpg"
                   className="gallery-image"
                   alt="Parrot"
                 />
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <img
                   src="/images/husky.jpg"
                   className="gallery-image"
                   alt="Husky"
                 />
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                 <img
                   src="/images/hamster.jpg"
                   className="gallery-image"

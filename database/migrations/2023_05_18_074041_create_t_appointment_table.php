@@ -18,7 +18,7 @@ return new class extends Migration
           $table->date(AppConstants::START_DATE);
           $table->string(AppConstants::APPLIED_WEEK_DAYS, 50);
           $table->string(AppConstants::APPLIED_DAY_TIME, 50);
-          $table->text(AppConstants::SITTER_NOTES);
+          $table->text(AppConstants::SITTER_NOTES)->nullable();
           $table->datetime(AppConstants::CREATED_AT)->nullable();
           $table->datetime(AppConstants::UPDATED_AT)->nullable();
         });

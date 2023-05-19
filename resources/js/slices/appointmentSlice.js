@@ -1,9 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { saveAppointment } from '../requests/appointmentRequests';
+import Swal from 'sweetalert2';
+import { showError, showSuccess } from '../alerts/alerts';
 
 const initialState = {
     oAppointmentForm: {
-      frequency: '',
+      frequency: 'recurring',
       start_date: '',
       applied_week_days: [],
       applied_day_time: [],
@@ -46,16 +48,16 @@ export const appointmentSlice = createSlice({
       builder
         .addCase(createAppointment.fulfilled, (state) => {
           state.oAppointmentForm = {
-            frequency: '',
+            frequency: 'recurring',
             start_date: '',
             applied_week_days: [],
             applied_day_time: [],
             sitter_notes: ''
           };
-          alert('Registration Successful!');
+          showSuccess();
         })
-        .addCase(createAppointment.rejected, () => {
-          alert('Registration Failed! An error occured.');
+        .addCase(createAppointment.rejected, (state, action) => {
+          showError(action.error.message);
         })
     }
 });

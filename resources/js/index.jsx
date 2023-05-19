@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../css/main.css'
 import Main from "./main";
+import 'sweetalert2/src/sweetalert2.scss'
 import { createRoot } from 'react-dom/client';
 import { Provider } from "react-redux";
 import { store } from "./store";

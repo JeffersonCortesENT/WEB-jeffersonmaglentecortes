@@ -12,7 +12,7 @@ const HomePage = () => {
   }
 
   const moveToServiceForm = () => {
-    appointmentRef.current?.scrollIntoView({behavior: 'smooth'});
+    serviceRef.current?.scrollIntoView({behavior: 'smooth'});
   }
 
   return (

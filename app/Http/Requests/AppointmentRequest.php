@@ -32,7 +32,7 @@ class AppointmentRequest extends FormRequest
             AppConstants::APPLIED_WEEK_DAYS. '.*' => [ValidationConstants::REQUIRED, ValidationConstants::STRING, Rule::in(AppConstants::WEEK_DAYS_VALUES)],
             AppConstants::APPLIED_DAY_TIME        => [ValidationConstants::REQUIRED, ValidationConstants::ARRAY],
             AppConstants::APPLIED_DAY_TIME. '.*'  => [ValidationConstants::REQUIRED, ValidationConstants::STRING, Rule::in(AppConstants::DAY_TIME_VALUES)],
-            AppConstants::SITTER_NOTES            => [ValidationConstants::STRING],
+            AppConstants::SITTER_NOTES            => [ValidationConstants::STRING, ValidationConstants::NULLABLE],
         ];
     }
 }
