@@ -46,6 +46,9 @@
 ```
 
 - Run XAMPP as administrator and then Start Apache and MySQL
+- Configure local SQL database in `.env` file
+- Create database with name `pet_appointments`
 - Navigate to project path (example: "D:\github-repositories\WEB-jeffersonmaglentecortes") using CMD
+- Input `php artisan migrate` into CLI
 - Input `npm run dev` into CLI
 - Verify if application is running by opening the app's local url (ex: "https://pet-appointments.local.com")
